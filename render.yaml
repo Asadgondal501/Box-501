@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: terabox-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python terabox_bot.py"
+    envVars:
+      - key: BOT_TOKEN
+        value: YOUR_TELEGRAM_BOT_TOKEN
